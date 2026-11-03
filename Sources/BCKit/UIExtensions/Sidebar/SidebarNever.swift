@@ -13,7 +13,7 @@ extension Swift.Never: Sidebar {
         fatalError()
     }
 
-    @_spi(CodeEdit)
+    @_spi(BCode)
     public func resolve(environment: some ObservableObject) -> [ResolvedSidebar] {
         fatalError()
     }

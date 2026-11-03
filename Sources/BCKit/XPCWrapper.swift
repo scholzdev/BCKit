@@ -29,9 +29,9 @@ public protocol XPCWrappable {
 
 class XPCWrapper: XPCWrappable {
 
-    var ext: any CodeEditExtension
+    var ext: any BCodeExtension
 
-    init(_ ext: any CodeEditExtension) {
+    init(_ ext: any BCodeExtension) {
         self.ext = ext
     }
 

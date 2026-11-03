@@ -14,25 +14,25 @@ struct EmptyAppExtensionScene: AppExtensionScene {
     }
 }
 
-public extension CodeEditExtension {
+public extension BCodeExtension {
     var body: some AppExtensionScene {
         EmptyAppExtensionScene()
     }
 }
 
-public extension CodeEditExtension where Self: SettingsExtension {
+public extension BCodeExtension where Self: SettingsExtension {
     var body: some AppExtensionScene {
         settingsScene
     }
 }
 
-public extension CodeEditExtension where Self: SidebarExtension {
+public extension BCodeExtension where Self: SidebarExtension {
     var body: some AppExtensionScene {
         sidebarScenes
     }
 }
 
-public extension CodeEditExtension where Self: SettingsExtension & SidebarExtension {
+public extension BCodeExtension where Self: SettingsExtension & SidebarExtension {
     @AppExtensionSceneBuilder
     var body: some AppExtensionScene {
         settingsScene

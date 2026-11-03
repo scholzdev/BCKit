@@ -8,7 +8,7 @@
 import SwiftUI
 import ExtensionKit
 
-public struct Navigator<Content: View>: Sidebar {
+public struct Inspector<Content: View>: Sidebar {
     public var body: Never {
         fatalError()
     }
@@ -22,7 +22,7 @@ public struct Navigator<Content: View>: Sidebar {
 
     @ViewBuilder var content: Content
 
-    @_spi(CodeEdit)
+    @_spi(BCode)
     public func resolve(environment: some ObservableObject) -> [ResolvedSidebar] {
         let scene = PrimitiveAppExtensionScene(id: id) {
             VStack(alignment: .leading) {
@@ -32,7 +32,7 @@ public struct Navigator<Content: View>: Sidebar {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
-        let store = ResolvedSidebar.SidebarStore(sceneID: id, kind: .navigator)
+        let store = ResolvedSidebar.SidebarStore(sceneID: id, kind: .inspector)
         return [ResolvedSidebar(scene: scene, store: store)]
     }
 }

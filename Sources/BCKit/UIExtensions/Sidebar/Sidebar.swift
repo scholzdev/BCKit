@@ -14,7 +14,7 @@ public protocol Sidebar {
     @SidebarBuilder
     var body: Body { get }
 
-    @_spi(CodeEdit)
+    @_spi(BCode)
     func resolve(environment: some ObservableObject) -> [ResolvedSidebar]
 }
 

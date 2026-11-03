@@ -35,18 +35,18 @@ jobs:
       #
       # - uses: fwcd/swift-docc-action@v1.0.2
       #   with:
-      #     target: CodeEditKit
+      #     target: BCKit
       #     output: ./docs
-      #     hosting-base-path: CodeEditKit
+      #     hosting-base-path: BCKit
       #     disable-indexing: 'true'
       #     transform-for-static-hosting: 'true'
       #
       # The command that this plugin uses is:
       #
       # swift package --allow-writing-to-directory ./docs generate-documentation \
-      #       --target CodeEditKit
+      #       --target BCKit
       #       --output-path ./docs 
-      #       --hosting-base-path CodeEditKit
+      #       --hosting-base-path BCKit
       #       --disable-indexing 
       #       --transform-for-static-hosting
       #

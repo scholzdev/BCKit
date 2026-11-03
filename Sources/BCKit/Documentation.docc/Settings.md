@@ -4,7 +4,7 @@
 
 ## Overview
 
-The ``SettingsExtension`` allows an extension to provide additional settings to the settings window of CodeEdit.
+The ``SettingsExtension`` allows an extension to provide additional settings to the settings window of b-code.
 Extension-specific settings can be configured this way.
 
 ``SettingsExtension`` expects a SwiftUI View and doesn't take care of the storage of settings. Therefore, you are responsible for storing your extensions' settings in an appropriate manner.
@@ -13,7 +13,7 @@ Extension-specific settings can be configured this way.
 
 ```swift
 @main
-final class SettingsExampleExtension: CodeEditExtension {
+final class SettingsExampleExtension: BCodeExtension {
 
     var description: String = ""
 

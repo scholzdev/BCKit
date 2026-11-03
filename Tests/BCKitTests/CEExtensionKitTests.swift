@@ -1,5 +1,5 @@
 import XCTest
-@testable import CodeEditKit
+@testable import BCKit
 
 final class CEExtensionKitTests: XCTestCase {
 

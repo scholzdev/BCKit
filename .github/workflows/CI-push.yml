@@ -10,7 +10,7 @@ jobs:
     uses: ./.github/workflows/swiftlint.yml
     secrets: inherit
   test:
-    name: Testing CodeEditKit
+    name: Testing BCKit
     needs: swiftlint
     uses: ./.github/workflows/tests.yml
     secrets: inherit

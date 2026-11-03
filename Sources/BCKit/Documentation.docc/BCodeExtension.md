@@ -1,4 +1,4 @@
-# ``CodeEditKit/CodeEditExtension``
+# ``BCKit/BCodeExtension``
 
 @Metadata {
     @DocumentationExtension(mergeBehavior: append)
@@ -8,18 +8,18 @@ The base extension.
 
 ## Overview
 
-All extensions supported by CodeEdit are defined as a ``CodeEditExtension``.
+All extensions supported by b-code are defined as a ``BCodeExtension``.
 This protocol provides basic information about the extension, such as the ``description``, name and ``entitlements``.
 
 This type is the entrypoint of your extension, so it should be marked with `@main`.
 
-Additional extensions can be defined by extending the class that implements ``CodeEditExtension``.
+Additional extensions can be defined by extending the class that implements ``BCodeExtension``.
 
 ## Example
 
 ```swift
 @main
-final class ExampleExtension: CodeEditExtension {
+final class ExampleExtension: BCodeExtension {
     var description: String = "test"
 
     var entitlements: [Entitlement] = [.currentfile]
@@ -41,7 +41,7 @@ struct SettingsView: View {
 }
 ```
 
-> Info: ``CodeEditExtension`` Conforms to ObservableObject and is automatically injected into the environment of each View. This way, it's possible to have shared state between different UI extensions by observing the object in a View.
+> Info: ``BCodeExtension`` Conforms to ObservableObject and is automatically injected into the environment of each View. This way, it's possible to have shared state between different UI extensions by observing the object in a View.
 > ```swift
 >   struct AView: View {
 >       @EnvironmentObject var main: ExampleExtension

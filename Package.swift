@@ -3,15 +3,15 @@
 import PackageDescription
 
 let package = Package(
-    name: "CodeEditKit",
+    name: "BCKit",
     platforms: [
-        .macOS(.v13)
+        .macOS("27.0")
     ],
     products: [
         .library(
-            name: "CodeEditKit",
+            name: "BCKit",
             type: .dynamic,
-            targets: ["CodeEditKit"])
+            targets: ["BCKit"])
     ],
     dependencies: [
         .package(url: "https://github.com/ChimeHQ/ConcurrencyPlus", from: "0.4.1"),
@@ -26,12 +26,12 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "CodeEditKit",
+            name: "BCKit",
             dependencies: ["AnyCodable", "ConcurrencyPlus"],
             plugins: [.plugin(name: "SwiftLint", package: "SwiftLintPlugin")]
         ),
         .testTarget(
-            name: "CodeEditKitTests",
-            dependencies: ["CodeEditKit"])
+            name: "BCKitTests",
+            dependencies: ["BCKit"])
     ]
 )

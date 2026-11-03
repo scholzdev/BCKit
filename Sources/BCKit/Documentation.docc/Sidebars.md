@@ -1,4 +1,4 @@
-# ``CodeEditKit/SidebarExtension``
+# ``BCKit/SidebarExtension``
 
 @Metadata {
     @DocumentationExtension(mergeBehavior: append)
@@ -14,7 +14,7 @@ The ``SidebarExtension`` protocol takes care of Navigator and Inspector extensio
 
 ```swift
 @main
-final class SidebarExtensionExample: CodeEditExtension {
+final class SidebarExtensionExample: BCodeExtension {
     var description: String = ""
 
     var entitlements: [Entitlement] = []

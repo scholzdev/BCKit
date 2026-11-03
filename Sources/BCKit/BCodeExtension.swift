@@ -8,7 +8,7 @@
 import ExtensionKit
 import ExtensionFoundation
 
-public protocol CodeEditExtension: AppExtension {
+public protocol BCodeExtension: AppExtension {
 
     /// UI scenes of the extension.
     associatedtype Body: AppExtensionScene
@@ -27,7 +27,7 @@ public protocol CodeEditExtension: AppExtension {
     var body: Body { get }
 }
 
-extension CodeEditExtension {
+extension BCodeExtension {
 
     var extensionURL: URL {
         Bundle.main.bundleURL
@@ -48,15 +48,15 @@ extension CodeEditExtension {
     }
 }
 
-public extension CodeEditExtension where Self: AnyObject {
-    /// XPC Configuration for communication with CodeEdit.
+public extension BCodeExtension where Self: AnyObject {
+    /// XPC Configuration for communication with b-code.
     /// Use the default implementation.
     var configuration: AppExtensionSceneConfiguration {
         AppExtensionSceneConfiguration(self.body, configuration: SettingsExtensionConfiguration(self))
     }
 }
 
-struct SettingsExtensionConfiguration<E: CodeEditExtension & AnyObject>: AppExtensionConfiguration {
+struct SettingsExtensionConfiguration<E: BCodeExtension & AnyObject>: AppExtensionConfiguration {
     public func accept(connection: NSXPCConnection) -> Bool {
         guard let appExtension else {
             return false
